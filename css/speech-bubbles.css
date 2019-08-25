@@ -1,0 +1,100 @@
+/* Speech Bubbles */
+.speech-bubble-left {
+  position: absolute;
+  background: #fcf113;
+  border-radius: 1.2em;
+  width: 275px;
+  height: 70px;
+  padding: 15px;
+  left: -25%;
+  top: 6%;
+  border-bottom: 5px solid black;
+  -webkit-animation: breathe-left 1.5s linear infinite; /* Safari 4+ */
+  -moz-animation: breathe-left 1.5s linear infinite; /* Fx 5+ */
+  -o-animation: breathe-left 1.5s linear infinite; /* Opera 12+ */
+  animation: breathe-left 1.5s linear infinite; /* IE 10+, Fx 29+ */
+}
+
+.speech-bubble-left:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left-color: #fcf113;
+  border-right: 0;
+  margin-top: -10px;
+  margin-right: -10px;
+}
+
+.speech-bubble-right {
+  position: absolute;
+  background: #fcf113;
+  border-radius: 1.2em;
+  width: 275px;
+  height: 70px;
+  padding: 15px;
+  top: 148%;
+  right: -25%;
+  border-bottom: 5px solid black;
+  -webkit-animation: breathe-right 1.5s linear infinite; /* Safari 4+ */
+  -moz-animation: breathe-right 1.5s linear infinite; /* Fx 5+ */
+  -o-animation: breathe-right 1.5s linear infinite; /* Opera 12+ */
+  animation: breathe-right 1.5s linear infinite; /* IE 10+, Fx 29+ */
+}
+
+.speech-bubble-right:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right-color: #fcf113;
+  border-left: 0;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.speech-bubble-close {
+  margin-left: auto;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+
+.speech-bubble-close:hover {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.speech-bubble-close:active {
+  transform: translateY(-1px);
+}
+
+@keyframes breathe-left {
+  0% {
+    left: -25%;
+  }
+  50% {
+    left: -26%;
+  }
+  100% {
+    left: -25%;
+  }
+}
+
+@keyframes breathe-right {
+  0% {
+    right: -25%;
+  }
+  50% {
+    right: -26%;
+  }
+  100% {
+    right: -25%;
+  }
+}

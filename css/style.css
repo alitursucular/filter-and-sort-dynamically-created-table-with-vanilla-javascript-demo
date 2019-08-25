@@ -1,0 +1,144 @@
+html {
+  /* 
+    * This propery keeps the scroll on the page at all times.
+    * Although it sounds inefficient, we keep this to have a better user interface while filtering.
+  */
+  overflow-y: scroll;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* General focus reset */
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus {
+  border-color: transparent;
+  box-shadow: 0 1px 1px transparent inset, 0 0 8px transparent;
+  outline: 0 none;
+  border-radius: 0;
+}
+
+/* Component level style */
+input[type="text"],
+input[type="text"]:focus {
+  border: none;
+  border-bottom: 3px solid #ddd;
+  border-radius: 0;
+  height: 70px;
+  font-size: 32px;
+  padding: 5px;
+}
+
+::placeholder {
+  /* Firefox, Chrome, Opera */
+  color: #ddd !important;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #ddd !important;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #ddd !important;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 700;
+}
+
+th {
+  width: 20%;
+  cursor: pointer;
+}
+
+th:hover {
+  background-color: #fdf893;
+}
+
+.order:hover {
+  background-color: #fdf893 !important;
+}
+
+.err {
+  display: none;
+  font-size: 18px;
+  padding: 15px;
+  border-bottom: 5px solid black;
+  background-color: #fcf113;
+  border-radius: 10px;
+}
+
+.thead-flash-once {
+  -webkit-animation: thead-flash-once 0.4s ease-in-out 2; /* Safari 4+ */
+  -moz-animation: thead-flash-once 0.4s ease-in-out 2; /* Fx 5+ */
+  -o-animation: thead-flash-once 0.4s ease-in-out 2; /* Opera 12+ */
+  animation: thead-flash-once 0.4s ease-in-out 2; /* IE 10+, Fx 29+ */
+}
+
+@keyframes thead-flash-once {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #fdf893;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.dev-signature ul {
+  margin: 0;
+  font-size: 15px;
+}
+
+.dev-signature .item-linkedin a {
+  color: #2867b2;
+}
+
+.dev-signature .item-website a {
+  color: #212529;
+}
+
+/* Very basic media queries */
+@media (max-width: 1200px) {
+  .speech-bubble-left,
+  .speech-bubble-right {
+    display: none !important;
+  }
+
+  table {
+    font-size: 12px;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  table {
+    font-size: 8px;
+  }
+  .dev-signature {
+    justify-content: flex-start !important;
+  }
+}
