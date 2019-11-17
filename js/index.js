@@ -27,7 +27,6 @@ speechBubbleRight.addEventListener('mouseout', () => {
     thead.classList.remove('thead-flash-once');
   }
 });
-// SPEECH BUBBLES
 
 // TABLE CREATION
 orders.forEach((order) => {
@@ -53,7 +52,6 @@ orders.forEach((order) => {
     cell.innerHTML = value;
   }
 });
-// TABLE CREATION
 
 // FILTER
 let filterInput = document.querySelector('.filter-input');
@@ -80,7 +78,6 @@ filterInput.addEventListener('keyup', () => {
     }
   });
 });
-// FILTER
 
 // SORT
 let sortDirection;
@@ -106,24 +103,3 @@ th.forEach((col, idx) => {
 
   });
 });
-// SORT
-
-
-
-  // for (let i = 0; i < filteredRows.length; i++) {
-  //   let val = filteredRows[i].childNodes[idx].innerHTML.toUpperCase();
-  //   console.log(val);
-  //   let b = { val, i };
-  //   abc.push(b);
-  // }
-
-  // https://stackoverflow.com/questions/4340227/sort-mixed-alpha-numeric-array
-  //const sortAlphaNum = (a, b) => a.val.localeCompare(b.val, 'en', { numeric: true, sensitivity: 'base' });
-  //console.log(typeof abc.sort(sortAlphaNum));
-  //const a = Array.from(abc.sort(sortAlphaNum));
-  //console.log(a);
-  // a.forEach((k) => {
-  //   console.log(k);
-  //   // k.insertRow(k.i);
-  // });
-
